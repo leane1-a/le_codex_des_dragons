@@ -1442,3 +1442,19 @@ Completed 200 OK in 21ms (Views: 9.7ms | ActiveRecord: 1.2ms (2 queries, 0 cache
 
 
   [1m[36mActiveRecord::SchemaMigration Load (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-02-20 15:29:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (42.3ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 2.5ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 232.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 271.0ms | GC: 0.0ms)
+Completed 200 OK in 431ms (Views: 125.5ms | ActiveRecord: 164.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 127.0.0.1 at 2025-02-20 15:29:26 +0100
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-02-20 15:29:26 +0100
