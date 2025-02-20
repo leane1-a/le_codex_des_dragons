@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @dragon %>
+<%= link_to "Games Of Thrones", universe_path%>
+<div>
+  <%= link_to "Edit this dragon", edit_dragon_path(@dragon) %> |
+  <%= link_to "Back to dragons", dragons_path %>
+
+  <%= button_to "Destroy this dragon", @dragon, method: :delete %>
+</div>
+

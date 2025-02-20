@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Universes" %>
+
+<h1>Universes</h1>
+
+<div id="universes">
+  <% @universes.each do |universe| %>
+    <%= render universe %>
+    <p>
+      <%= link_to "Voir les dragons", dragons_path %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New universe", new_universe_path %>

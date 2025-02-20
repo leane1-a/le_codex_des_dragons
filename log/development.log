@@ -1,0 +1,1444 @@
+Started GET "/" for 127.0.0.1 at 2025-02-20 12:01:07 +0100
+  
+ActiveRecord::NoDatabaseError (We could not find your database: le_codex_des_dragons_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+)
+Caused by: PG::ConnectionBad (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  la base de données « le_codex_des_dragons_development » n'existe pas
+)
+
+Information for: ActiveRecord::NoDatabaseError (We could not find your database: le_codex_des_dragons_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:63:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:934:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:946:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:669:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:668:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:770:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:761:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:778:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:984:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:983:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:55:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:54:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.1) lib/active_record/migration.rb:1431:in 'ActiveRecord::Migrator#initialize'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in 'Class#new'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in 'ActiveRecord::MigrationContext#open'
+activerecord (8.0.1) lib/active_record/migration.rb:763:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.1) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (8.0.1) lib/active_record/migration.rb:762:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in 'Array#each'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:740:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.10) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.10) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+
+Information for cause: PG::ConnectionBad (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  la base de données « le_codex_des_dragons_development » n'existe pas
+):
+  
+pg (1.5.9) lib/pg/connection.rb:709:in 'PG::Connection#async_connect_or_reset'
+pg (1.5.9) lib/pg/connection.rb:844:in 'PG::Connection.connect_to_hosts'
+pg (1.5.9) lib/pg/connection.rb:772:in 'PG::Connection.new'
+pg (1.5.9) lib/pg.rb:63:in 'PG.connect'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:58:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:934:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:946:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:669:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:668:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:770:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:761:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:778:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:984:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:983:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:55:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:54:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.1) lib/active_record/migration.rb:1431:in 'ActiveRecord::Migrator#initialize'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in 'Class#new'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in 'ActiveRecord::MigrationContext#open'
+activerecord (8.0.1) lib/active_record/migration.rb:763:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.1) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (8.0.1) lib/active_record/migration.rb:762:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in 'Array#each'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:740:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.10) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.10) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-02-20 12:01:11 +0100
+  
+ActiveRecord::NoDatabaseError (We could not find your database: le_codex_des_dragons_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+)
+Caused by: PG::ConnectionBad (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  la base de données « le_codex_des_dragons_development » n'existe pas
+)
+
+Information for: ActiveRecord::NoDatabaseError (We could not find your database: le_codex_des_dragons_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:63:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:934:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:946:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:669:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:668:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:770:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:761:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:778:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:984:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:983:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:55:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:54:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.1) lib/active_record/migration.rb:1431:in 'ActiveRecord::Migrator#initialize'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in 'Class#new'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in 'ActiveRecord::MigrationContext#open'
+activerecord (8.0.1) lib/active_record/migration.rb:763:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.1) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (8.0.1) lib/active_record/migration.rb:762:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in 'Array#each'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:740:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.10) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.10) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+
+Information for cause: PG::ConnectionBad (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  la base de données « le_codex_des_dragons_development » n'existe pas
+):
+  
+pg (1.5.9) lib/pg/connection.rb:709:in 'PG::Connection#async_connect_or_reset'
+pg (1.5.9) lib/pg/connection.rb:844:in 'PG::Connection.connect_to_hosts'
+pg (1.5.9) lib/pg/connection.rb:772:in 'PG::Connection.new'
+pg (1.5.9) lib/pg.rb:63:in 'PG.connect'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:58:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:934:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:946:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:669:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:668:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:770:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:761:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:778:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:984:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:983:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:55:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:54:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.1) lib/active_record/migration.rb:1431:in 'ActiveRecord::Migrator#initialize'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in 'Class#new'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in 'ActiveRecord::MigrationContext#open'
+activerecord (8.0.1) lib/active_record/migration.rb:763:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.1) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (8.0.1) lib/active_record/migration.rb:762:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in 'Array#each'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:740:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.10) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.10) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2025-02-20 12:01:17 +0100
+  [1m[35mSQL (27.5ms)[0m  [1m[35mSET search_path TO public /*application='LeCodexDesDragons'*/[0m
+  [1m[35m (3921.2ms)[0m  [1m[35mCREATE DATABASE "le_codex_des_dragons_development" ENCODING = 'unicode' /*application='LeCodexDesDragons'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='LeCodexDesDragons'*/[0m
+  [1m[35m (313.6ms)[0m  [1m[35mCREATE DATABASE "le_codex_des_dragons_test" ENCODING = 'unicode' /*application='LeCodexDesDragons'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-02-20 12:01:22 +0100
+  [1m[35m (129.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='LeCodexDesDragons'*/[0m
+  [1m[35m (85.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='LeCodexDesDragons'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (12.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250220110045_create_universes.rb
+
+
+):
+  
+activerecord (8.0.1) lib/active_record/migration.rb:743:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.10) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.10) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2025-02-20 12:01:28 +0100
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2698486772158612365) /*application='LeCodexDesDragons'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (12.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='LeCodexDesDragons'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (21.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-02-20 11:01:28.268098', '2025-02-20 11:01:28.268103') RETURNING "key" /*application='LeCodexDesDragons'*/[0m
+Migrating to CreateUniverses (20250220110045)
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mBEGIN /*application='LeCodexDesDragons'*/[0m
+  [1m[35m (112.1ms)[0m  [1m[35mCREATE TABLE "universes" ("id" bigserial primary key, "name" character varying, "release_date" integer, "description_universe" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='LeCodexDesDragons'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (6.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250220110045') RETURNING "version" /*application='LeCodexDesDragons'*/[0m
+  [1m[36mTRANSACTION (19.7ms)[0m  [1m[35mCOMMIT /*application='LeCodexDesDragons'*/[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2698486772158612365) /*application='LeCodexDesDragons'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-02-20 12:01:28 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/debian/.rbenv/versions/3.4.1/lib/ruby/gems/3.4.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/debian/.rbenv/versions/3.4.1/lib/ruby/gems/3.4.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.9ms | GC: 0.0ms)
+Completed 200 OK in 192ms (Views: 30.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/universe" for 127.0.0.1 at 2025-02-20 12:01:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/universe"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-02-20 12:01:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:01:47 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (17.9ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/index.html.erb within layouts/application (Duration: 22.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 79.8ms | GC: 5.6ms)
+Completed 200 OK in 311ms (Views: 70.1ms | ActiveRecord: 17.8ms (1 query, 0 cached) | GC: 35.9ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-02-20 12:01:47 +0100
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-02-20 12:01:48 +0100
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 127.0.0.1 at 2025-02-20 12:01:48 +0100
+Started GET "/universes/new" for 127.0.0.1 at 2025-02-20 12:01:53 +0100
+Processing by UniversesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/new.html.erb within layouts/application
+  Rendered universes/_form.html.erb (Duration: 406.6ms | GC: 5.3ms)
+  Rendered universes/new.html.erb within layouts/application (Duration: 417.1ms | GC: 5.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 418.3ms | GC: 5.3ms)
+Completed 200 OK in 451ms (Views: 419.0ms | ActiveRecord: 7.6ms (0 queries, 0 cached) | GC: 6.2ms)
+
+
+Started POST "/universes" for 127.0.0.1 at 2025-02-20 12:03:34 +0100
+Processing by UniversesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "universe" => {"name" => "Games Of Thrones", "release_date" => "2011", "description_universe" => "Games Of Thrones est une série télévisée fantastique."}, "commit" => "Create Universe"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:27:in 'block in UniversesController#create'
+  [1m[36mUniverse Create (12.3ms)[0m  [1m[32mINSERT INTO "universes" ("name", "release_date", "description_universe", "created_at", "updated_at") VALUES ('Games Of Thrones', 2011, 'Games Of Thrones est une série télévisée fantastique.', '2025-02-20 11:03:35.013811', '2025-02-20 11:03:35.013811') RETURNING "id" /*action='create',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:27:in 'block in UniversesController#create'
+  [1m[36mTRANSACTION (35.4ms)[0m  [1m[35mCOMMIT /*action='create',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:27:in 'block in UniversesController#create'
+Redirected to http://localhost:3000/universes/1
+Completed 302 Found in 89ms (ActiveRecord: 47.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:03:35 +0100
+Processing by UniversesController#show as TURBO_STREAM
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (2.4ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 4.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 0.0ms)
+Completed 200 OK in 47ms (Views: 7.7ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes/1/edit" for 127.0.0.1 at 2025-02-20 12:03:35 +0100
+Processing by UniversesController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (12.2ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='edit',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/edit.html.erb within layouts/application
+  Rendered universes/_form.html.erb (Duration: 17.0ms | GC: 6.3ms)
+  Rendered universes/edit.html.erb within layouts/application (Duration: 18.1ms | GC: 6.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | GC: 6.3ms)
+Completed 200 OK in 95ms (Views: 23.0ms | ActiveRecord: 12.1ms (1 query, 0 cached) | GC: 6.3ms)
+
+
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:03:43 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (1.0ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 5.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 7.4ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:03:47 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (1.5ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 3.8ms | ActiveRecord: 1.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:03:52 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (1.6ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 3.5ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:04:14 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (1.6ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 2.2ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.5ms)
+Completed 200 OK in 17ms (Views: 3.8ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:04:22 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (0.9ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 5.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 6.2ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:04:24 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (2.0ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 5.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 7.3ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes/1/edit" for 127.0.0.1 at 2025-02-20 12:04:24 +0100
+Processing by UniversesController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (1.5ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='edit',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/edit.html.erb within layouts/application
+  Rendered universes/_form.html.erb (Duration: 4.3ms | GC: 0.0ms)
+  Rendered universes/edit.html.erb within layouts/application (Duration: 5.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 6.9ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:04:25 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (6.7ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 14.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | GC: 0.0ms)
+Completed 200 OK in 71ms (Views: 34.4ms | ActiveRecord: 6.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:04:28 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (1.8ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 4.8ms | ActiveRecord: 1.8ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:04:41 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (0.8ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 4.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 5.7ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:04:44 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (1.7ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 3.2ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 1.7ms)
+Completed 200 OK in 24ms (Views: 6.9ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 4.5ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:04:57 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (13.5ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 1.3ms | GC: 1.1ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 37.1ms | GC: 7.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 62.6ms | GC: 7.9ms)
+Completed 200 OK in 133ms (Views: 76.1ms | ActiveRecord: 13.3ms (1 query, 0 cached) | GC: 10.8ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:04:59 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (1.3ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 5.4ms | GC: 2.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | GC: 2.3ms)
+Completed 200 OK in 27ms (Views: 10.3ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 5.5ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:05:00 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (9.6ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 21.7ms | GC: 10.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | GC: 10.5ms)
+Completed 200 OK in 97ms (Views: 29.9ms | ActiveRecord: 9.6ms (1 query, 0 cached) | GC: 14.6ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:05:02 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (18.3ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 13.4ms | GC: 4.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | GC: 5.9ms)
+Completed 200 OK in 102ms (Views: 36.8ms | ActiveRecord: 16.3ms (1 query, 0 cached) | GC: 20.4ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:28:32 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (103.2ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 205.1ms | GC: 3.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 322.8ms | GC: 68.4ms)
+Completed 200 OK in 393ms (Views: 94.8ms | ActiveRecord: 233.6ms (1 query, 0 cached) | GC: 68.4ms)
+
+
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:29:28 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (12.1ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 90.5ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 100.1ms | GC: 0.6ms)
+Completed 200 OK in 124ms (Views: 34.5ms | ActiveRecord: 70.4ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:30:02 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (18.2ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 83.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 110.7ms | GC: 0.0ms)
+Completed 200 OK in 151ms (Views: 74.5ms | ActiveRecord: 52.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:30:18 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (0.5ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 53.7ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 67.5ms | GC: 0.2ms)
+Completed 200 OK in 96ms (Views: 64.5ms | ActiveRecord: 7.4ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+  [1m[36mCACHE ActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:32:58 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250220113247_create_dragons.rb
+
+
+):
+  
+activerecord (8.0.1) lib/active_record/migration.rb:743:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.10) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.10) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2025-02-20 12:33:02 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2698486772158612365) /*application='LeCodexDesDragons'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (8.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='LeCodexDesDragons'*/[0m
+Migrating to CreateDragons (20250220113247)
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[35mBEGIN /*application='LeCodexDesDragons'*/[0m
+  [1m[35m (156.7ms)[0m  [1m[35mCREATE TABLE "dragons" ("id" bigserial primary key, "name" character varying, "universe_id" bigint NOT NULL, "size" character varying, "description" text, "image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_1d81029f5e"
+FOREIGN KEY ("universe_id")
+  REFERENCES "universes" ("id")
+) /*application='LeCodexDesDragons'*/[0m
+  [1m[35m (76.6ms)[0m  [1m[35mCREATE INDEX "index_dragons_on_universe_id" ON "dragons" ("universe_id") /*application='LeCodexDesDragons'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250220113247') RETURNING "version" /*application='LeCodexDesDragons'*/[0m
+  [1m[36mTRANSACTION (20.5ms)[0m  [1m[35mCOMMIT /*application='LeCodexDesDragons'*/[0m
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2698486772158612365) /*application='LeCodexDesDragons'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (7.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:33:03 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (20.0ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 93.7ms | GC: 5.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 123.4ms | GC: 6.6ms)
+Completed 200 OK in 282ms (Views: 127.9ms | ActiveRecord: 27.9ms (1 query, 0 cached) | GC: 41.3ms)
+
+
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:33:13 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (1.4ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:8
+  Rendered dragons/index.html.erb within layouts/application (Duration: 5.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | GC: 0.0ms)
+Completed 200 OK in 92ms (Views: 42.2ms | ActiveRecord: 1.4ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/dragons/new" for 127.0.0.1 at 2025-02-20 12:33:19 +0100
+Processing by DragonsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/new.html.erb within layouts/application
+  [1m[36mUniverse Load (7.9ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='new',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_form.html.erb:8
+  Rendered dragons/_form.html.erb (Duration: 94.9ms | GC: 1.6ms)
+  Rendered dragons/new.html.erb within layouts/application (Duration: 113.2ms | GC: 1.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 123.4ms | GC: 1.6ms)
+Completed 200 OK in 147ms (Views: 117.8ms | ActiveRecord: 12.1ms (1 query, 0 cached) | GC: 1.6ms)
+
+
+Started POST "/dragons" for 127.0.0.1 at 2025-02-20 12:35:51 +0100
+Processing by DragonsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "dragon" => {"name" => "Drogon", "universe_id" => "1", "size" => "Grand", "description" => "Description drogon", "image" => "https://fr.web.img3.acsta.net/newsv7/17/07/21/15/44/3699120.jpg"}, "commit" => "Create Dragon"}
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mBEGIN /*action='create',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/controllers/dragons_controller.rb:27:in 'block in DragonsController#create'
+  [1m[36mUniverse Load (20.9ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='create',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/controllers/dragons_controller.rb:27:in 'block in DragonsController#create'
+  [1m[36mDragon Create (7.7ms)[0m  [1m[32mINSERT INTO "dragons" ("name", "universe_id", "size", "description", "image", "created_at", "updated_at") VALUES ('Drogon', 1, 'Grand', 'Description drogon', 'https://fr.web.img3.acsta.net/newsv7/17/07/21/15/44/3699120.jpg', '2025-02-20 11:35:51.183655', '2025-02-20 11:35:51.183655') RETURNING "id" /*action='create',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/controllers/dragons_controller.rb:27:in 'block in DragonsController#create'
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[35mCOMMIT /*action='create',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/controllers/dragons_controller.rb:27:in 'block in DragonsController#create'
+Redirected to http://localhost:3000/dragons/1
+Completed 302 Found in 174ms (ActiveRecord: 53.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dragons/1" for 127.0.0.1 at 2025-02-20 12:35:51 +0100
+Processing by DragonsController#show as TURBO_STREAM
+  Parameters: {"id" => "1"}
+  [1m[36mDragon Load (4.9ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" WHERE "dragons"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/controllers/dragons_controller.rb:63:in 'DragonsController#set_dragon'
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/show.html.erb within layouts/application
+  Rendered dragons/_dragon.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered dragons/show.html.erb within layouts/application (Duration: 8.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 15.7ms | ActiveRecord: 4.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dragons/1" for 127.0.0.1 at 2025-02-20 12:36:34 +0100
+Processing by DragonsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mDragon Load (8.1ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" WHERE "dragons"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/controllers/dragons_controller.rb:63:in 'DragonsController#set_dragon'
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/show.html.erb within layouts/application
+  Rendered dragons/_dragon.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered dragons/show.html.erb within layouts/application (Duration: 6.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | GC: 0.0ms)
+Completed 200 OK in 149ms (Views: 44.7ms | ActiveRecord: 42.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dragons/1" for 127.0.0.1 at 2025-02-20 12:36:54 +0100
+Processing by DragonsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mDragon Load (10.5ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" WHERE "dragons"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/controllers/dragons_controller.rb:63:in 'DragonsController#set_dragon'
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/show.html.erb within layouts/application
+  Rendered dragons/_dragon.html.erb (Duration: 4.4ms | GC: 0.0ms)
+  Rendered dragons/show.html.erb within layouts/application (Duration: 25.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 47.1ms | GC: 0.0ms)
+Completed 200 OK in 178ms (Views: 54.2ms | ActiveRecord: 69.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dragons/1" for 127.0.0.1 at 2025-02-20 12:37:28 +0100
+Processing by DragonsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mDragon Load (18.0ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" WHERE "dragons"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/controllers/dragons_controller.rb:63:in 'DragonsController#set_dragon'
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/show.html.erb within layouts/application
+  Rendered dragons/_dragon.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered dragons/show.html.erb within layouts/application (Duration: 5.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | GC: 1.2ms)
+Completed 200 OK in 142ms (Views: 27.1ms | ActiveRecord: 31.0ms (1 query, 0 cached) | GC: 31.4ms)
+
+
+Started GET "/dragons/1" for 127.0.0.1 at 2025-02-20 12:37:47 +0100
+Processing by DragonsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mDragon Load (5.3ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" WHERE "dragons"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/controllers/dragons_controller.rb:63:in 'DragonsController#set_dragon'
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/show.html.erb within layouts/application
+  Rendered dragons/_dragon.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered dragons/show.html.erb within layouts/application (Duration: 11.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | GC: 0.0ms)
+Completed 200 OK in 136ms (Views: 36.7ms | ActiveRecord: 50.7ms (1 query, 0 cached) | GC: 5.5ms)
+
+
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:38:04 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (3.2ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:8
+  Rendered dragons/_dragon.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 32.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | GC: 0.0ms)
+Completed 200 OK in 51ms (Views: 38.5ms | ActiveRecord: 3.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:38:40 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (1.8ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:8
+  [1m[36mUniverse Load (11.7ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 123.1ms | GC: 0.8ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 184.2ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 187.6ms | GC: 1.1ms)
+Completed 200 OK in 235ms (Views: 77.6ms | ActiveRecord: 135.2ms (2 queries, 0 cached) | GC: 1.8ms)
+
+
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:38:57 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (2.6ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:8
+  Rendered dragons/_dragon.html.erb (Duration: 3.3ms | GC: 0.0ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 104.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 107.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 58.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div id="<%= dom_id dragon %>">
+  <p>
+    <strong>Name:</strong>
+    <%= dragon.name %>
+  </p>
+
+  <p>
+    <strong>Universe:</strong>
+    <%= dragon.universe, name %>
+  </p>
+
+  <p>
+    <strong>Size:</strong>
+    <%= dragon.size %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= dragon.description %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag dragon.image %>
+  </p>
+
+</div>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/debian/le_codex_des_dragons/app/views/dragons/_dragon.html.erb:9: syntax error found
+  [2m7 | [m  <p>
+  [2m8 | [m    <strong>Universe:</strong>
+[1;31m> [m[2m9 | [m... ( dragon.universe, name ); @output_buffer.safe_append=' ...
+  [2m  | [m    [1;31m^~~~~~~~~~~~~~~~~~~~~~~~~[m unexpected write target
+  [2m10 | [m  </p>
+  [2m11 | [m
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div id="<%= dom_id dragon %>">
+  <p>
+    <strong>Name:</strong>
+    <%= dragon.name %>
+  </p>
+
+  <p>
+    <strong>Universe:</strong>
+    <%= dragon.universe, name %>
+  </p>
+
+  <p>
+    <strong>Size:</strong>
+    <%= dragon.size %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= dragon.description %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag dragon.image %>
+  </p>
+
+</div>
+
+):
+1:    <div id="<%= dom_id dragon %>">
+2:      <p>
+3:        <strong>Name:</strong>
+4:        <%= dragon.name %>
+5:      </p>
+6:    
+7:      <p>
+8:        <strong>Universe:</strong>
+9:        <%= dragon.universe, name %>
+10:      </p>
+11:    
+12:      <p>
+13:        <strong>Size:</strong>
+14:        <%= dragon.size %>
+15:      </p>
+16:    
+17:      <p>
+18:        <strong>Description:</strong>
+19:        <%= dragon.description %>
+20:      </p>
+21:    
+22:      <p>
+23:        <strong>Image:</strong>
+24:        <%= image_tag dragon.image %>
+25:      </p>
+26:    
+27:    </div>
+  
+app/views/dragons/_dragon.html.erb:9: syntax error found
+app/views/dragons/index.html.erb:9
+app/views/dragons/index.html.erb:8
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/debian/le_codex_des_dragons/app/views/dragons/_dragon.html.erb:9: syntax error found
+  [2m7 | [m  <p>
+  [2m8 | [m    <strong>Universe:</strong>
+[1;31m> [m[2m9 | [m... ( dragon.universe, name ); @output_buffer.safe_append=' ...
+  [2m  | [m    [1;31m^~~~~~~~~~~~~~~~~~~~~~~~~[m unexpected write target
+  [2m10 | [m  </p>
+  [2m11 | [m
+):
+  
+app/views/dragons/_dragon.html.erb:9: syntax error found
+app/views/dragons/index.html.erb:9
+app/views/dragons/index.html.erb:8
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-02-20 12:39:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:39:15 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (7.8ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:8
+  [1m[36mUniverse Load (11.5ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 88.5ms | GC: 0.9ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 201.4ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 211.0ms | GC: 1.7ms)
+Completed 200 OK in 251ms (Views: 92.6ms | ActiveRecord: 127.7ms (2 queries, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:40:42 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (1.5ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:8
+  [1m[36mUniverse Load (0.6ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 34.4ms | GC: 0.0ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 60.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 81.4ms | GC: 0.0ms)
+Completed 200 OK in 128ms (Views: 75.9ms | ActiveRecord: 9.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:41:13 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (10.7ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:8
+  [1m[36mUniverse Load (8.0ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 66.2ms | GC: 4.2ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 155.4ms | GC: 6.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 167.0ms | GC: 6.6ms)
+Completed 200 OK in 220ms (Views: 75.3ms | ActiveRecord: 106.7ms (2 queries, 0 cached) | GC: 25.4ms)
+
+
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:43:47 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (7.4ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:8
+  [1m[36mUniverse Load (8.7ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 83.3ms | GC: 0.4ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 150.3ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 166.5ms | GC: 1.7ms)
+Completed 200 OK in 216ms (Views: 87.6ms | ActiveRecord: 97.7ms (2 queries, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/dragons/1" for 127.0.0.1 at 2025-02-20 12:43:59 +0100
+Processing by DragonsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mDragon Load (27.4ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" WHERE "dragons"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/controllers/dragons_controller.rb:63:in 'DragonsController#set_dragon'
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/show.html.erb within layouts/application
+  [1m[36mUniverse Load (42.2ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 57.7ms | GC: 0.0ms)
+  Rendered dragons/show.html.erb within layouts/application (Duration: 67.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 71.8ms | GC: 0.0ms)
+Completed 200 OK in 150ms (Views: 33.2ms | ActiveRecord: 69.6ms (2 queries, 0 cached) | GC: 6.3ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:44:04 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (1.2ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 5.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 14.1ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:44:04 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (15.7ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 14.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | GC: 0.0ms)
+Completed 200 OK in 75ms (Views: 25.4ms | ActiveRecord: 15.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:44:11 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (0.4ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 5.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | GC: 0.0ms)
+Completed 200 OK in 46ms (Views: 34.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:44:16 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (8.8ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 41.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 42.2ms | GC: 0.0ms)
+Completed 200 OK in 57ms (Views: 38.0ms | ActiveRecord: 8.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dragons/1" for 127.0.0.1 at 2025-02-20 12:44:55 +0100
+Processing by DragonsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mDragon Load (0.4ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" WHERE "dragons"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/controllers/dragons_controller.rb:63:in 'DragonsController#set_dragon'
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/show.html.erb within layouts/application
+  [1m[36mUniverse Load (0.4ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 52.5ms | GC: 0.0ms)
+  Rendered dragons/show.html.erb within layouts/application (Duration: 61.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 88.3ms | GC: 0.0ms)
+Completed 200 OK in 181ms (Views: 88.9ms | ActiveRecord: 41.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:44:59 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (0.6ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 6.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:48:32 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (14.5ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:8
+  [1m[36mUniverse Load (16.8ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 33.1ms | GC: 0.0ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 80.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 86.6ms | GC: 0.0ms)
+Completed 200 OK in 101ms (Views: 66.5ms | ActiveRecord: 24.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:48:48 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (0.4ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:9
+  [1m[36mUniverse Load (0.9ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 30.5ms | GC: 5.1ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 66.9ms | GC: 5.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 80.3ms | GC: 6.1ms)
+Completed 200 OK in 130ms (Views: 71.0ms | ActiveRecord: 13.1ms (2 queries, 0 cached) | GC: 6.1ms)
+
+
+Started GET "/dragons/1" for 127.0.0.1 at 2025-02-20 12:49:20 +0100
+Processing by DragonsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mDragon Load (0.6ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" WHERE "dragons"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/controllers/dragons_controller.rb:63:in 'DragonsController#set_dragon'
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/show.html.erb within layouts/application
+  [1m[36mUniverse Load (0.5ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 3.0ms | GC: 0.0ms)
+  Rendered dragons/show.html.erb within layouts/application (Duration: 6.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 37ms (Views: 22.6ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:50:49 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (7.5ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:7
+  Rendered dragons/index.html.erb within layouts/application (Duration: 34.7ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | GC: 0.6ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 17.3ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'dragon' for an instance of #<Class:0x00007f49138cfab0>)
+Caused by: NameError (undefined local variable or method 'dragon' for an instance of #<Class:0x00007f49138cfab0>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'dragon' for an instance of #<Class:0x00007f49138cfab0>):
+     5: <h1>Dragons</h1>
+     6: 
+     7: <% @dragons.each do |universe| %>
+     8:     <%= render dragon %>
+     9:     <p>
+    10:       <%= link_to "Games Of Thrones", universe %>
+    11:     </p>
+  
+app/views/dragons/index.html.erb:8
+app/views/dragons/index.html.erb:7
+
+Information for cause: NameError (undefined local variable or method 'dragon' for an instance of #<Class:0x00007f49138cfab0>):
+  
+app/views/dragons/index.html.erb:8
+app/views/dragons/index.html.erb:7
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:51:10 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (5.9ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:7
+  [1m[36mUniverse Load (10.6ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 100.0ms | GC: 24.7ms)
+  Rendered dragons/_dragon.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 180.3ms | GC: 39.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 221.3ms | GC: 59.7ms)
+Completed 200 OK in 285ms (Views: 176.8ms | ActiveRecord: 72.8ms (2 queries, 0 cached) | GC: 63.4ms)
+
+
+Started GET "/dragons/1" for 127.0.0.1 at 2025-02-20 12:51:25 +0100
+Processing by DragonsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mDragon Load (1.8ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" WHERE "dragons"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/controllers/dragons_controller.rb:63:in 'DragonsController#set_dragon'
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/show.html.erb within layouts/application
+  [1m[36mUniverse Load (13.7ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 44.0ms | GC: 5.1ms)
+  Rendered dragons/show.html.erb within layouts/application (Duration: 62.4ms | GC: 5.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 78.8ms | GC: 5.1ms)
+Completed 200 OK in 101ms (Views: 72.9ms | ActiveRecord: 15.4ms (2 queries, 0 cached) | GC: 5.1ms)
+
+
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:52:00 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (11.1ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:8
+  [1m[36mUniverse Load (12.6ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 36.2ms | GC: 1.6ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 142.7ms | GC: 2.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 164.3ms | GC: 2.8ms)
+Completed 200 OK in 192ms (Views: 74.3ms | ActiveRecord: 93.7ms (2 queries, 0 cached) | GC: 2.8ms)
+
+
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:52:18 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (1.2ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 6.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 9.3ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:52:21 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (1.8ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 13.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 22.3ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes/1/edit" for 127.0.0.1 at 2025-02-20 12:52:34 +0100
+Processing by UniversesController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (1.9ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='edit',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/edit.html.erb within layouts/application
+  Rendered universes/_form.html.erb (Duration: 14.6ms | GC: 1.0ms)
+  Rendered universes/edit.html.erb within layouts/application (Duration: 50.5ms | GC: 1.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 78.3ms | GC: 1.0ms)
+Completed 200 OK in 127ms (Views: 100.0ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:52:34 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (15.4ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 63.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 67.3ms | GC: 0.0ms)
+Completed 200 OK in 150ms (Views: 62.6ms | ActiveRecord: 15.4ms (1 query, 0 cached) | GC: 7.7ms)
+
+
+Started GET "/universes/1" for 127.0.0.1 at 2025-02-20 12:54:12 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (10.7ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 20.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | GC: 0.0ms)
+Completed 200 OK in 78ms (Views: 50.6ms | ActiveRecord: 10.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes" for 127.0.0.1 at 2025-02-20 12:55:11 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (7.8ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:8
+  Rendered universes/_universe.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 69.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 81.1ms | GC: 0.0ms)
+Completed 200 OK in 116ms (Views: 51.6ms | ActiveRecord: 37.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:55:14 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (1.0ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:8
+  [1m[36mUniverse Load (10.8ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 42.1ms | GC: 0.0ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 89.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 90.3ms | GC: 0.0ms)
+Completed 200 OK in 105ms (Views: 62.2ms | ActiveRecord: 31.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dragons" for 127.0.0.1 at 2025-02-20 12:55:47 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (0.4ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:8
+  [1m[36mUniverse Load (0.9ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:9
+  Rendered dragons/_dragon.html.erb (Duration: 3.9ms | GC: 0.0ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 8.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 9.7ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='LeCodexDesDragons'*/[0m
