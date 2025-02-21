@@ -2,8 +2,8 @@
 
 <% content_for :title, "Dragons" %>
 
-<h1>Dragons</h1>
-<h2>Bienvenue dans notre codex des dragons.<br>
+<h1>LE CODEX DES DRAGONS</h1>
+<h2>Bienvenue !<br>
 Parcourez notre application à la recherche de votre dragon préféré !</h2>
 
 <html>
@@ -20,9 +20,9 @@ Parcourez notre application à la recherche de votre dragon préféré !</h2>
   <% @dragons.each do |dragon| %>
     <%= render dragon %>
     <p>
-      <%= link_to "Show this dragon", dragon, class: "btn btn-outline-primary" %>
+      <%= link_to "Voir ce dragon", dragon, class: "btn btn-outline-primary" %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New dragon", new_dragon_path, class: "btn btn-outline-danger" %>
+<%= link_to "Créer un nouveau dragon", new_dragon_path, class: "btn btn-outline-danger" %>

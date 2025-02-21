@@ -11,9 +11,9 @@
 <%= render @dragon %>
 
 <div>
-  <%= link_to "Edit this dragon", edit_dragon_path(@dragon), class: "btn btn-outline-primary" %> |
-  <%= link_to "Back to dragons", dragons_path, class: "btn btn-outline-primary" %>
+  <%= link_to "Modifier ce dragon", edit_dragon_path(@dragon), class: "btn btn-outline-primary" %> |
+  <%= link_to "Retour vers les dragons", dragons_path, class: "btn btn-outline-primary" %>
 
-  <%= button_to "Destroy this dragon", @dragon, method: :delete, class: "btn btn-outline-danger" %>
+  <%= button_to "Supprimer ce dragon", @dragon, method: :delete, class: "btn btn-outline-danger" %>
 </div>
 
