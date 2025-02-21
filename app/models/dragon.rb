@@ -1,5 +1,3 @@
 class Dragon < ApplicationRecord
-  belongs_to :universe
-  end
-  
+  belongs_to :universe  
 end
