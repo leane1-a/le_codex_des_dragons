@@ -7747,3 +7747,32 @@ Processing by DragonsController#index as HTML
 Completed 200 OK in 90ms (Views: 9.4ms | ActiveRecord: 5.8ms (3 queries, 1 cached) | GC: 2.3ms)
 
 
+Started GET "/dragons" for ::1 at 2025-02-21 17:09:50 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (26.6ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:20
+  [1m[36mUniverse Load (0.8ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:11
+  Rendered dragons/_dragon.html.erb (Duration: 6.4ms | GC: 0.3ms)
+  [1m[36mCACHE Universe Load (0.0ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1[0m
+  ↳ app/views/dragons/_dragon.html.erb:11
+  Rendered dragons/_dragon.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 39.2ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | GC: 0.9ms)
+Completed 200 OK in 110ms (Views: 2.2ms | ActiveRecord: 40.1ms (3 queries, 1 cached) | GC: 1.6ms)
+
+
+Started GET "/dragons/new" for ::1 at 2025-02-21 17:09:53 +0100
+Processing by DragonsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/new.html.erb within layouts/application
+  [1m[36mUniverse Load (0.8ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='new',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_form.html.erb:16
+  Rendered dragons/_form.html.erb (Duration: 7.1ms | GC: 0.5ms)
+  Rendered dragons/new.html.erb within layouts/application (Duration: 8.8ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 0.5ms)
+Completed 200 OK in 82ms (Views: 8.9ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.5ms)
+
+
