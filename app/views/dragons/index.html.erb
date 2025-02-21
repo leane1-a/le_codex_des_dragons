@@ -20,9 +20,9 @@ Parcourez notre application à la recherche de votre dragon préféré !</h2>
   <% @dragons.each do |dragon| %>
     <%= render dragon %>
     <p>
-      <%= link_to "Show this dragon", dragon %>
+      <%= link_to "Show this dragon", dragon, class: "btn btn-outline-primary" %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New dragon", new_dragon_path %>
+<%= link_to "New dragon", new_dragon_path, class: "btn btn-outline-danger" %>

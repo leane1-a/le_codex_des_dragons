@@ -1,11 +1,19 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 10px 20px 20px 50px;
+      }
+    </style>
+  </head>
 <p style="color: green"><%= notice %></p>
 
 <%= render @dragon %>
 
 <div>
-  <%= link_to "Edit this dragon", edit_dragon_path(@dragon) %> |
-  <%= link_to "Back to dragons", dragons_path %>
+  <%= link_to "Edit this dragon", edit_dragon_path(@dragon), class: "btn btn-outline-primary" %> |
+  <%= link_to "Back to dragons", dragons_path, class: "btn btn-outline-primary" %>
 
-  <%= button_to "Destroy this dragon", @dragon, method: :delete %>
+  <%= button_to "Destroy this dragon", @dragon, method: :delete, class: "btn btn-outline-danger" %>
 </div>
 

@@ -12,8 +12,8 @@
 <%= render @universe %>
 
 <div>
-  <%= link_to "Edit this universe", edit_universe_path(@universe) %> |
-  <%= link_to "Back to universes", universes_path %>
-
-  <%= button_to "Destroy this universe", @universe, method: :delete %>
+  <%= link_to "Edit this universe", edit_universe_path(@universe), class: "btn btn-outline-primary" %> |
+  <%= link_to "Back to universes", universes_path, class: "btn btn-outline-primary" %> 
+    
+  <%= button_to "Destroy this universe", @universe, method: :delete, class: "btn btn-outline-danger" %>
 </div>

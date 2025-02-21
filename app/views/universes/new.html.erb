@@ -1,3 +1,11 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 10px 20px 20px 50px;
+      }
+    </style>
+  </head>
 <% content_for :title, "New universe" %>
 
 <h1>New universe</h1>
@@ -7,5 +15,5 @@
 <br>
 
 <div>
-  <%= link_to "Back to universes", universes_path %>
+  <%= link_to "Back to universes", universes_path, class: "btn btn-outline-success" %>
 </div>
