@@ -3031,3 +3031,202 @@ Processing by UniversesController#index as HTML
 Completed 200 OK in 78ms (Views: 4.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 1.0ms)
 
 
+Started GET "/dragons" for ::1 at 2025-02-21 15:11:11 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (1.0ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:20
+  [1m[36mUniverse Load (0.3ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:10
+  Rendered dragons/_dragon.html.erb (Duration: 9.2ms | GC: 0.3ms)
+  [1m[36mCACHE Universe Load (0.0ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1[0m
+  ↳ app/views/dragons/_dragon.html.erb:10
+  Rendered dragons/_dragon.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 22.7ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | GC: 0.7ms)
+Completed 200 OK in 92ms (Views: 12.8ms | ActiveRecord: 12.6ms (3 queries, 1 cached) | GC: 1.1ms)
+
+
+Started GET "/universes/1" for ::1 at 2025-02-21 15:11:13 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (11.7ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 86ms (Views: 2.4ms | ActiveRecord: 11.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes" for ::1 at 2025-02-21 15:11:16 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (0.7ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:17
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 78ms (Views: 3.3ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes/new" for ::1 at 2025-02-21 15:11:18 +0100
+Processing by UniversesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/new.html.erb within layouts/application
+  Rendered universes/_form.html.erb (Duration: 3.9ms | GC: 0.5ms)
+  Rendered universes/new.html.erb within layouts/application (Duration: 5.0ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.5ms)
+Completed 200 OK in 82ms (Views: 5.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/universes" for ::1 at 2025-02-21 15:11:24 +0100
+Processing by UniversesController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "universe" => {"name" => "gggg", "release_date" => "245", "description_universe" => "gvy"}, "commit" => "Create Universe"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:27:in 'block in UniversesController#create'
+  [1m[36mUniverse Create (5.4ms)[0m  [1m[32mINSERT INTO "universes" ("name", "release_date", "description_universe", "created_at", "updated_at") VALUES ('gggg', 245, 'gvy', '2025-02-21 14:11:24.668170', '2025-02-21 14:11:24.668170') RETURNING "id" /*action='create',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:27:in 'block in UniversesController#create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*action='create',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:27:in 'block in UniversesController#create'
+Redirected to http://localhost:3000/universes/2
+Completed 302 Found in 83ms (ActiveRecord: 6.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes/2" for ::1 at 2025-02-21 15:11:24 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mUniverse Load (0.5ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 2 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 60ms (Views: 1.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes" for ::1 at 2025-02-21 15:11:27 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (0.7ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:17
+  Rendered universes/_universe.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered universes/_universe.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 75ms (Views: 3.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes" for ::1 at 2025-02-21 15:11:41 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (1.1ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:17
+  Rendered universes/_universe.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered universes/_universe.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 13.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | GC: 0.0ms)
+Completed 200 OK in 89ms (Views: 13.3ms | ActiveRecord: 8.4ms (1 query, 0 cached) | GC: 5.0ms)
+
+
+Started GET "/universes" for ::1 at 2025-02-21 15:11:55 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (0.4ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:17
+  Rendered universes/_universe.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered universes/_universe.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 9.6ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | GC: 0.2ms)
+Completed 200 OK in 79ms (Views: 6.3ms | ActiveRecord: 5.6ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/universes" for ::1 at 2025-02-21 15:12:02 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (1.0ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:17
+  Rendered universes/_universe.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered universes/_universe.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 12.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | GC: 0.4ms)
+Completed 200 OK in 78ms (Views: 7.7ms | ActiveRecord: 7.7ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/universes" for ::1 at 2025-02-21 15:12:16 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (1.0ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:17
+  Rendered universes/_universe.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered universes/_universe.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 13.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | GC: 0.0ms)
+Completed 200 OK in 80ms (Views: 7.7ms | ActiveRecord: 8.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/universes" for ::1 at 2025-02-21 15:12:34 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (11.5ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:17
+  Rendered universes/_universe.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered universes/_universe.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 20.2ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | GC: 1.0ms)
+Completed 200 OK in 88ms (Views: 7.2ms | ActiveRecord: 15.8ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/universes" for ::1 at 2025-02-21 15:12:47 +0100
+Processing by UniversesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering universes/index.html.erb within layouts/application
+  [1m[36mUniverse Load (0.8ms)[0m  [1m[34mSELECT "universes".* FROM "universes" /*action='index',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/views/universes/index.html.erb:17
+  Rendered universes/_universe.html.erb (Duration: 0.5ms | GC: 0.2ms)
+  Rendered universes/_universe.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered universes/index.html.erb within layouts/application (Duration: 12.0ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | GC: 0.2ms)
+Completed 200 OK in 79ms (Views: 7.5ms | ActiveRecord: 7.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/dragons" for ::1 at 2025-02-21 15:13:41 +0100
+Processing by DragonsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (1.1ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons" /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/index.html.erb:20
+  [1m[36mUniverse Load (0.3ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='index',application='LeCodexDesDragons',controller='dragons'*/[0m
+  ↳ app/views/dragons/_dragon.html.erb:10
+  Rendered dragons/_dragon.html.erb (Duration: 8.5ms | GC: 0.0ms)
+  [1m[36mCACHE Universe Load (0.0ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1[0m
+  ↳ app/views/dragons/_dragon.html.erb:10
+  Rendered dragons/_dragon.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered dragons/index.html.erb within layouts/application (Duration: 21.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | GC: 0.0ms)
+Completed 200 OK in 92ms (Views: 12.2ms | ActiveRecord: 11.8ms (3 queries, 1 cached) | GC: 0.1ms)
+
+
+Started GET "/universes/1" for ::1 at 2025-02-21 15:13:42 +0100
+Processing by UniversesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUniverse Load (0.8ms)[0m  [1m[34mSELECT "universes".* FROM "universes" WHERE "universes"."id" = 1 LIMIT 1 /*action='show',application='LeCodexDesDragons',controller='universes'*/[0m
+  ↳ app/controllers/universes_controller.rb:63:in 'UniversesController#set_universe'
+  Rendering layout layouts/application.html.erb
+  Rendering universes/show.html.erb within layouts/application
+  Rendered universes/_universe.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered universes/show.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 76ms (Views: 4.0ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
